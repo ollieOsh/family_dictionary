@@ -20,16 +20,17 @@ namespace family_dictionary
             });
 
             foreach (KeyValuePair<string, Dictionary<string, string>> member in myFamily){
-                string name = "";
-                string age = "";
-                foreach(KeyValuePair<string, string> details in member.Value){
-                    if(details.Key == "name"){
-                        name = details.Value;
-                    }else{
-                        age = details.Value;
-                    }
-                }
-                Console.WriteLine($"{name} is my {member.Key} and is {age} years old");
+                // string name = "";
+                // string age = "";
+                // foreach(KeyValuePair<string, string> details in member.Value){
+                //     if(details.Key == "name"){
+                //         name = details.Value;
+                //     }else{
+                //         age = details.Value;
+                //     }
+                // }
+                // Console.WriteLine($"{name} is my {member.Key} and is {age} years old");
+                Console.WriteLine("{0} is my {1} and is {2} years old", member.Value["name"], member.Key, member.Value["age"]);
             }
             
         }
